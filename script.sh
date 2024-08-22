@@ -14,7 +14,7 @@ echo
 	case $choices in
 a) date;;
 b) ls -l;;
-c) cat /etc/passwd | more;;
+c) cat /etc/passwd;;
 d) cp script.sh class1/file1.txt;;
 g) grep -name script.sh echo;;
 f) echo invalid choices
