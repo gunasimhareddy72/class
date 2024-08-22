@@ -15,7 +15,7 @@ echo
 a) date;;
 b) ls -l;;
 c) cat /etc/passwd | more;;
-d) touch file.txt
+d) touch file.txt;;
 e) ls;;
 f) echo invalid choices
 		esac 
