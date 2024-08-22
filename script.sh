@@ -15,7 +15,7 @@ echo
 a) date;;
 b) ls -l;;
 c) cat /etc/passwd | more;;
-d) touch file.txt;;
+d) cp script.sh class1/file.txt;;
 g) grep -name script.sh echo;;
 f) echo invalid choices
 		esac 
