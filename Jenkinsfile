@@ -28,6 +28,7 @@ pipeline {
     post {
         always{
             sh 'touch test9.txt'
+            sh 'vim test9.txt'
         }
         
         success {
