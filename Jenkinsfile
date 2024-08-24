@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 // This command will fail because 'exit 1' returns a non-zero exit code
-                sh 'exit1'
+                sh 'cat test2.txt'
             }
         }
         
