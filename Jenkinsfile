@@ -28,6 +28,7 @@ pipeline {
     post {
         always{
             sh 'cat test1.txt'
+        }
         
         success {
             echo 'This will run only if the pipeline succeeds.'
