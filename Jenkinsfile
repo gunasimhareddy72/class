@@ -27,7 +27,7 @@ pipeline {
     
     post {
         always{
-            sh 'cat test1.txt'
+            sh 'touch test9.txt'
         }
         
         success {
