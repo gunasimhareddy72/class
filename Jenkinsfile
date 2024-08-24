@@ -28,7 +28,7 @@ pipeline {
     post {
         always{
             sh 'touch test9.txt'
-            sh 'vim test9.txt'
+            sh 'echo "this is test9.txt hello nice to meet you" >> test9.txt'
         }
         
         success {
