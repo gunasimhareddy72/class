@@ -31,6 +31,25 @@ pipeline {
             sh 'echo "this is test9.txt hello nice to meet you" >> test9.txt'
             sh 'ifconfig'
         }
+        post {
+		always {
+		    emailtext (
+			subject: "Pipeline status: ${currentBuild.result}",
+			body: '''<html>
+				     <body>
+					  <p>Build Status: ${currentBuild.result}</p>
+					  <p>Build Number: ${currentBuild.number}</p>
+					  <p>Check the <a href="${env.BUILD_URL}">console output</a></p>
+				     </body>
+				 </html>'''
+			to: 'gunasimhareddy72@gmail.com'
+			from: 'eshwarmahadev72@gmail.com'
+			replyTo: 'kotlagunasimha72@gmail.com'
+			mimeType: 'text/html'
+		   )
+		}
+	}
+
         
         success {
             echo 'This will run only if the pipeline succeeds.'
