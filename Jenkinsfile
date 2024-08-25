@@ -26,11 +26,7 @@ pipeline {
     }
     
     post {
-        always {
-            sh 'touch test9.txt'
-            sh 'echo "this is test9.txt hello nice to meet you" >> test9.txt'
-            sh 'ifconfig'
-        }
+        
         
         success {
             echo 'This will run only if the pipeline succeeds.'
