@@ -26,7 +26,11 @@ pipeline {
     }
     
     post {
-        
+        always {
+            sh 'touch test9.txt'
+            sh 'echo "this is test9.txt hello nice to meet you" >> test9.txt'
+            sh 'ifconfig'
+        }
         
         success {
             echo 'This will run only if the pipeline succeeds.'
@@ -41,12 +45,12 @@ pipeline {
                 subject: "Pipeline status: ${currentBuild.result}",
                 body: '''<html>
                             <body>
-                                <p>Build Status: ${currentBuild.result}</p>
-                                <p>Build Number: ${currentBuild.number}</p>
+                                <p>Build Status: ${currentBuild.result ?: 'UNKNOWN'}</p>
+                                <p>Build Number: ${currentBuild.number ?: 'UNKNOWN'}</p>
                                 <p>Check the <a href="${env.BUILD_URL}">console output</a></p>
                             </body>
                         </html>''',
-                to: 'eshwarmahadev72@gmail.com',
+                to: 'gunasimhareddy72@gmail.com',
                 from: 'eshwarmahadev72@gmail.com',
                 replyTo: 'kotlagunasimha72@gmail.com',
                 mimeType: 'text/html'
