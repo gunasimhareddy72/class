@@ -43,7 +43,7 @@ pipeline {
                                 <p>Build Number: ${BUILD_NUMBER}</p>
                                 <p>Check the <a href="${BUILD_URL}">console output</a></p>
                             </body>
-                        </html>''', subject: 'test email configuration', to: 'eshwarmahadev72@gmail.com'
+                        </html>''', subject: 'test email configuration', to: 'kotlagunasimha72@gmail.com'
         }
     }
 }
