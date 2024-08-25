@@ -46,7 +46,7 @@ pipeline {
                                 <p>Check the <a href="${env.BUILD_URL}">console output</a></p>
                             </body>
                         </html>''',
-                to: 'gunasimhareddy72@gmail.com',
+                to: 'eshwarmahadev72@gmail.com',
                 from: 'eshwarmahadev72@gmail.com',
                 replyTo: 'kotlagunasimha72@gmail.com',
                 mimeType: 'text/html'
