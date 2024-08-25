@@ -38,19 +38,12 @@ pipeline {
 
         always {
             emailext (
-                subject: "Pipeline status: ${currentBuild.result}",
-                body: '''<html>
-                            <body>
-                                <p>Build Status: ${currentBuild.result ?: 'UNKNOWN'}</p>
-                                <p>Build Number: ${currentBuild.number ?: 'UNKNOWN'}</p>
-                                <p>Check the <a href="${env.BUILD_URL}">console output</a></p>
-                            </body>
-                        </html>''',
-                to: 'gunasimhareddy72@gmail.com',
-                from: 'eshwarmahadev72@gmail.com',
-                replyTo: 'kotlagunasimha72@gmail.com',
-                mimeType: 'text/html'
-            )
+                        subject: "Simple Pipeline Notification",
+                        body: "The pipeline has completed with status: ${currentBuild.result}.",
+                        to: 'eshwarmahadev72@gmail.com',
+                        from: 'eshwarmahadev72@gmail.com',
+                        replyTo: 'kotlagunasimha72@gmail.com'
+                    )
         }
     }
 }
